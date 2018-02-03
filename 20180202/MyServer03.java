@@ -8,7 +8,6 @@ public class MyServer03{
 		ServerSocket servSock = null;
 		Socket clientSock = null;
 		OutputStream os = null;
-		PrintWriter pw = null;
 		InputStream in = null;
 		InputStreamReader inr = null;
 		BufferedReader br = null;
@@ -27,13 +26,11 @@ public class MyServer03{
 				os = clientSock.getOutputStream();
 				in = clientSock.getInputStream();
 				inr = new InputStreamReader(in);
-				pw = new PrintWriter(os);
 				br = new BufferedReader(inr);
 
 				String clientData = br.readLine();
 				System.out.println("クライアントから受信したデータ:" + clientData);
-				pw.println("ALOHA!");
-				pw.flush();
+
 			}
 			//clientSock.close();
 		}catch(IOException e){
