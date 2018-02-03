@@ -18,15 +18,13 @@ public class MyClient02{
       msg = "ALOHA!!!!!";
 
       outstr = wrsocket.getOutputStream();
-        //for (i=0; i<msg.length(); i++) 
-        //outstr.write((int)msg.charAt(i));
-        outstr.write('\n');
+      outstr.write('\n');
 
       int n = instr.read(buff);
       System.out.write(buff, 0, n);
 
       wrsocket.close();
-    }catch (Exception e){
+      }catch (Exception e){
       System.err.println("ネットワークエラー");
       System.exit(1);
       cont = false;
