@@ -12,7 +12,7 @@ public class MyClient01{
 
 		try{
 
-			sock = new Socket("172.16.21.54",6000);
+			sock = new Socket("localhost",6000);
 
 		}catch(IOException e){
 			System.err.println("クライアントエラー");
