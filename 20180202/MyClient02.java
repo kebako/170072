@@ -12,7 +12,7 @@ public class MyClient02{
     int i;
 
     try{
-      wrsocket = new Socket(args[0],5999);
+      wrsocket = new Socket("localhost",5999);
       instr = wrsocket.getInputStream();
 
       msg = "ALOHA!!!!!";
