@@ -5,7 +5,7 @@ import java.net.*;
 		Socket writeSocket;
 		OutputStream out;
 		try{
-			writeSocket = new Socket("192.168.3.18",4000);
+			writeSocket = new Socket("172.16.21.56",4999);
 			out = writeSocket.getOutputStream();
 			PrintWriter pw = new PrintWriter(out);
 			
